@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+float r1, r2, a, b, c;
+
+//entrada dos valores
+void scan() {
+
+  printf("Digite o valor A da equação:"); 
+  scanf("%f", &a); 
+
+  printf("Digite o valor B da equação:"); 
+  scanf("%f", &b); 
+  
+  printf("Digite o valor C da equação:"); 
+  scanf("%f", &c); 
+}
+
+//calculando as raízes
+
+float raiz1() {
+  r1 = (-b + sqrt((b*b) - 4*a*c))/(2*a);
+  return (r1);
+}  
+  
+float raiz2() { 
+  r2 = (-b - sqrt((b*b) - 4*a*c))/(2*a);
+  return (r2);
+}
+
+float main () {
+    scan();
+    printf("A primeira raiz é: %f", raiz1());
+    printf("\nA segunda raiz é: %f", raiz2());
+    return 0;
+}
