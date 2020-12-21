@@ -6,13 +6,13 @@ float r1, r2, a, b, c;
 //entrada dos valores
 void scan() {
 
-  printf("Digite o valor A da equação:"); 
+  printf("Digite o coeficiente A da equação:"); 
   scanf("%f", &a); 
 
-  printf("Digite o valor B da equação:"); 
+  printf("Digite o coeficiente B da equação:"); 
   scanf("%f", &b); 
   
-  printf("Digite o valor C da equação:"); 
+  printf("Digite o coeficiente C da equação:"); 
   scanf("%f", &c); 
 }
 
