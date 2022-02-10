@@ -1,12 +1,21 @@
 #include <stdio.h>
 #include <math.h>
 
+#define MAX 100
+
 int main()
 {
     int nserie;
 
     printf("Quantos números da sua série (N): ");
     scanf("%d", &nserie);
+
+    while (nserie > MAX){
+        printf("Valor muito alto! Insira um número até 100.\n..........\n");
+
+        printf("Quantos números da sua série (N): ");
+        scanf("%d", &nserie);
+    }
 
     float vet[nserie];
 
@@ -59,12 +68,12 @@ int main()
 
      //Mediana
 
-    float *ptr;
+
     float aux;
     float mediana;
-    int n;
+    int n = 0;
+    float* ptr = &vet[0];
 
-    ptr = &vet[0];
     while (ptr <= &vet[nserie]){
         for (int i=n; i<nserie; i++) {
             if (vet[i] < *ptr){
@@ -76,6 +85,7 @@ int main()
         ptr++;
         n++;
     }
+
 
     if (nserie % 2 != 0){
         int meio = nserie / 2;
